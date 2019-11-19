@@ -7,7 +7,10 @@ class Logboek{
   
   
   function __construct($naam, $datum, $tijd, $categorie){
-    
+    $this ->_naam = $naam;
+    $this ->_datum = $datum;
+    $this ->_tijd = $tijd;
+    $this ->_categorie = $categorie;
   }
   
   function ActiviteitToevoegen(){
