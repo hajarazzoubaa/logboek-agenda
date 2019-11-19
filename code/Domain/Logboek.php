@@ -9,5 +9,13 @@ class Logboek{
   function __construct($naam, $datum, $tijd, $categorie){
     
   }
+  
+  function ActiviteitToevoegen(){
+    
+  }
+  
+  function ActiviteitVerwijderen(){
+    
+  }
 }
 ?>
