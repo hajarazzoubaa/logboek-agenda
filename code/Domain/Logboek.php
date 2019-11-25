@@ -1,6 +1,6 @@
 <?php
 class Logboek{
-  private $_naam = "";
+  private $_naam = array[];
   private $_datum = Datum();
   private $_tijd = Tijd();
   private $_categorie = Categorie();

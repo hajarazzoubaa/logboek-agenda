@@ -1,5 +1,5 @@
 <?php
-class Maand extends Datum{
+class Maand{
   private $_maandNaam = "";
   private $_maandGetal = 0;
   
