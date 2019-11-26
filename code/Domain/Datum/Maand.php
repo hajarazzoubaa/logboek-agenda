@@ -1,11 +1,9 @@
 <?php
 class Maand{
-  private $_maandNaam = "";
-  private $_maandGetal = 0;
+  private $_maand = 0;
   
-  function __construct($naam, $getal){
-    $this ->_maandNaam = $naam;
-    $this ->_maandGetal = $getal;
+  function __construct($maand){
+    $this ->_maand = $maand;
   }
 }
 ?>

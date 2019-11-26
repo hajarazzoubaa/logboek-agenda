@@ -7,5 +7,12 @@ class Tijd{
     $this ->_uur = $uur;
     $this ->_minuten = $minuten;
   }
+  
+  if($uur > 24){
+    $uur = 24;
+  }
+  if($minuten > 59){
+    $minuten = 59;
+  }
 }
 ?>

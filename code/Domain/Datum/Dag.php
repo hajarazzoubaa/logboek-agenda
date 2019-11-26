@@ -1,11 +1,9 @@
 <?php
 class Dag{
-  private $_dagInWeek = "";
-  private $_dagInMaand = 0;
+  private $_dag = 0;
   
-  function __construct($week, $maand){
-    $this ->_dagInWeek = $week;
-    $this ->_dagInMaand = $maand;  
+  function __construct($dag){
+    $this ->_dag = $dag;
   }
 }
 ?>
