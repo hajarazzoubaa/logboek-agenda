@@ -15,7 +15,7 @@ class Afspraak extends Categorie{
 		$this->_afspraken[] = $afspraak1;
   }
   public function AfspraakVerwijderen(){
-    array.remove($afspraak1);
+    $_afspraken.remove($afspraak1);
   }
 }
 ?>

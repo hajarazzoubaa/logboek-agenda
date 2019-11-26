@@ -11,7 +11,7 @@ class Evenement extends Categorie{
     $this->_evenementen[] = $evenement1;
   }
   public function EvenementVerwijderen(){
-    array.remove($evenement1);
+    $_evenementen.remove($evenement1);
   }
   
 }
