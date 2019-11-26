@@ -1,9 +1,9 @@
 <?php
 class Taak extends Categorie{
-  private $_notitie = "";
+  private $_taak = "";
   
   public function __construct($notitie){
-    $this -> _notitie = $notitie;
+    $this -> _taak = $taak;
   }
   public function TaakToevoegen(){
     

@@ -1,9 +1,9 @@
 <?php
 class Feestdag extends Categorie{
-  private $_notitie = "";
+  private $_feestdag = "";
   
   public function __construct($notitie){
-    $this -> _notitie = $notitie;
+    $this -> _feestdag = $feestdag;
   }
   public function FeestdagenToevoegen(){
     
