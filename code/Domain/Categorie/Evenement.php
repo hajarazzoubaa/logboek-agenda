@@ -1,7 +1,9 @@
 <?php
+require_once(__DIR__ . "/Categorie.php");
+
 class Evenement extends Categorie{
   private $_locatie = "";
-  private $_evenementen = array[];
+  private $_evenementen = array();
   
   public function __construct($locatie){
     $this -> _locatie = $locatie;

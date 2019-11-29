@@ -1,6 +1,8 @@
 <?php
+require_once(__DIR__ . "/Categorie.php");
+
 class Taak extends Categorie{
-  private $_taken = array[];
+  private $_taken = array();
   private $_taak = "";
   
   public function __construct($taak){

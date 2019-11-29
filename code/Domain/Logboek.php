@@ -1,14 +1,14 @@
 <?php
 
-require_once(__DIR__ . "/Categorie.php");
-require_once(__DIR__ . "/Datum.php");
+require_once(__DIR__ . "/Categorie/Categorie.php");
+require_once(__DIR__ . "/Datum/Datum.php");
 
 class Logboek{
-  private $_naam = array[];
-  private $_datum = Datum();
-  private $_tijd = Tijd();
-  private $_categorie = Categorie();
-  private $_activiteiten = array[];
+  private $_naam = array();
+  private $_datum = Datum;
+  private $_tijd = Tijd;
+  private $_categorie = Categorie;
+  private $_activiteiten = array();
   
   function __construct($naam, $datum, $tijd, $categorie){
     $this ->_naam = $naam;
@@ -23,7 +23,7 @@ class Logboek{
   }
   
   function ActiviteitVerwijderen(){
-    array.remove($Activiteit1);
+    $_activiteiten.remove($Activiteit1);
   }
 }
 ?>

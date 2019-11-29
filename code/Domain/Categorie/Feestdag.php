@@ -1,7 +1,9 @@
 <?php
+require_once(__DIR__ . "/Categorie.php");
+
 class Feestdag extends Categorie{
   private $_feestdag = "";
-  private $_feestdagen = array[];
+  private $_feestdagen = array();
   
   public function __construct($notitie){
     $this -> _feestdag = $feestdag;

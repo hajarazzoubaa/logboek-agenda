@@ -9,12 +9,14 @@ class Datum{
     $this ->_dag = $dag;
     $this ->_maand = $maand;
     $this ->_jaar = $jaar;
+    
+    if($dag > 31){
+      $dag = 31;
+    }
+    if($maand > 12){
+      $maand = 12;
+    }
   }
-  if($dag > 31){
-    $dag = 31;
-  }
-  if($maand > 12){
-    $maand = 12;
-  }
+
 }
 ?>
