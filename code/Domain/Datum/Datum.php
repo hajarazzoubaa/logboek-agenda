@@ -5,6 +5,8 @@ class Datum{
   private $_maand = 0;
   private $_jaar = 0;
   
+/*deze functie zorgt ervoor dat de gebruiker verplicht wordt om een dag, maand en jaar
+mee te geven als hij/zij deze klasse wil aanroepen.*/
   function __construct($dag, $maand, $jaar){
     $this ->_dag = $dag;
     $this ->_maand = $maand;
