@@ -1,0 +1,75 @@
+div#mainLayoutGrid {
+  display: grid;
+
+  grid-template-columns: auto;
+  grid-template-rows: 30px 50px auto 50px auto;
+
+  grid-template-areas:  "head"
+                        "jaar20"
+                        "maanden20"
+                        "jaar21"
+                        "maanden21";
+  grid-gap: 20px;
+  border-color: 1px solid black;
+
+}
+
+div#mainLayoutGrid>#head{
+  grid-area: head;
+  
+  
+  grid-template-columns: 1p 1p 1p 1p;
+  grid-template-rows: auto;
+
+  grid-template-areas: "home"
+                       "week"
+                       "maand"
+                       "signOut";
+  grid-gap: 20px;
+  border-color: 1px solid black;
+}
+div#mainLayoutGrid>#head>#home{
+  grid-area: home;
+}
+div#mainLayoutGrid>#head>#week{
+  grid-area: week;
+}
+div#mainLayoutGrid>#head>#maand{
+  grid-area: maand;
+}
+div#mainLayoutGrid>#head>#signOut{
+  grid-area: signOut;
+}
+
+div#mainLayoutGrid>#jaar20{
+  grid-area: jaar20;
+  
+}
+div#mainLayoutGrid>#maanden20{
+  grid-area: maanden20;
+  
+  grid-template-columns: 1p 1p 1p 1p 1p;
+  grid-template-rows: auto auto auto;
+
+  grid-template-areas: ". januari februari maart april ."
+                       ". mei juni juli augustus ."
+                       ". september oktober november december .";
+  grid-gap: 20px;
+  border-color: 1px solid black;
+}
+div#mainLayoutGrid>#jaar21{
+  grid-area: jaar21;
+  
+}
+div#mainLayoutGrid>#maanden21{
+  grid-area: maanden21;
+  
+  grid-template-columns: 1p 1p 1p 1p 1p;
+  grid-template-rows: auto auto auto;
+
+  grid-template-areas: ". januari februari maart april ."
+                       ". mei juni juli augustus ."
+                       ". september oktober november december .";
+  grid-gap: 20px;
+  border-color: 1px solid black;
+}
