@@ -1,0 +1,23 @@
+div#mainLayoutGrid>#head{
+  grid-area: head;
+  
+  display: grid;
+  grid-template-columns: 1p 1p 1p 1p;
+  grid-template-rows: auto;
+
+  grid-template-areas: "home week maand signOut";
+  grid-gap: 20px;
+  border-color: 1px solid black;
+}
+div#mainLayoutGrid>#head>#home{
+  grid-area: home;
+}
+div#mainLayoutGrid>#head>#week{
+  grid-area: week;
+}
+div#mainLayoutGrid>#head>#maand{
+  grid-area: maand;
+}
+div#mainLayoutGrid>#head>#signOut{
+  grid-area: signOut;
+}

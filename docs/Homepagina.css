@@ -17,18 +17,13 @@ div#mainLayoutGrid {
 div#mainLayoutGrid>#head{
   grid-area: head;
   
-  
+  display: grid;
   grid-template-columns: 1p 1p 1p 1p;
   grid-template-rows: auto;
 
-  grid-template-areas: "home"
-                       "week"
-                       "maand"
-                       "signOut";
+  grid-template-areas: "home week maand signOut";
   grid-gap: 20px;
   border-color: 1px solid black;
-  
-  
 }
 div#mainLayoutGrid>#head>#home{
   grid-area: home;
@@ -50,6 +45,7 @@ div#mainLayoutGrid>#year20{
 div#mainLayoutGrid>#maanden20{
   grid-area: maanden20;
   
+  display: grid;
   grid-template-columns: 1p 1p 1p 1p 1p;
   grid-template-rows: auto auto auto;
 
@@ -66,6 +62,7 @@ div#mainLayoutGrid>#year21{
 div#mainLayoutGrid>#maanden21{
   grid-area: maanden21;
   
+  display: grid;
   grid-template-columns: 1p 1p 1p 1p 1p;
   grid-template-rows: auto auto auto;
 
