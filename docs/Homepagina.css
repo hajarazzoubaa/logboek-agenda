@@ -5,9 +5,9 @@ div#mainLayoutGrid {
   grid-template-rows: 30px 50px auto 50px auto;
 
   grid-template-areas:  "head"
-                        "jaar20"
+                        "year20"
                         "maanden20"
-                        "jaar21"
+                        "year21"
                         "maanden21";
   grid-gap: 20px;
   border-color: 1px solid black;
@@ -41,8 +41,8 @@ div#mainLayoutGrid>#head>#signOut{
   grid-area: signOut;
 }
 
-div#mainLayoutGrid>#jaar20{
-  grid-area: jaar20;
+div#mainLayoutGrid>#year20{
+  grid-area: year20;
   
 }
 div#mainLayoutGrid>#maanden20{
@@ -57,8 +57,8 @@ div#mainLayoutGrid>#maanden20{
   grid-gap: 20px;
   border-color: 1px solid black;
 }
-div#mainLayoutGrid>#jaar21{
-  grid-area: jaar21;
+div#mainLayoutGrid>#year21{
+  grid-area: year21;
   
 }
 div#mainLayoutGrid>#maanden21{
