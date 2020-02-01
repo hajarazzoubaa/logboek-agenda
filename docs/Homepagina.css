@@ -27,6 +27,8 @@ div#mainLayoutGrid>#head{
                        "signOut";
   grid-gap: 20px;
   border-color: 1px solid black;
+  
+  
 }
 div#mainLayoutGrid>#head>#home{
   grid-area: home;
