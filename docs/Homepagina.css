@@ -1,19 +1,14 @@
-*{
-  font-family: "Lato", sans-serif;
- }
-
 div#mainLayoutGrid {
   display: grid;
 
   grid-template-columns: auto;
-  grid-template-rows: 30px 50px auto 50px auto;
+  grid-template-rows: 30px auto auto 50px auto;
 
   grid-template-areas:  "head"
                         "year20"
                         "maanden20"
                         "year21"
                         "maanden21";
-  grid-gap: 20px;
   border-color: 1px solid black;
 
 }
@@ -26,19 +21,58 @@ div#mainLayoutGrid>#head{
   grid-template-rows: auto;
 
   grid-template-areas: "home week maand signOut";
-  grid-gap: 20px;
   border-color: 1px solid black;
-  background-color: #f1f1f1;
-  font-size: 18px;
-  line-height: 1.5;
-  text-align: center;
+  
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
+  font-size: 20px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  box-sizing: inherit;
 }
 div#mainLayoutGrid>#head>#home{
   grid-area: home;
-  
+
+}
+
+div#mainLayoutGrid>#head>#home,
+div#mainLayoutGrid>#head>#week,
+div#mainLayoutGrid>#head>#maand,
+div#mainLayoutGrid>#head>#signOut{
+    
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: #f1f1f1;
+}
+div#mainLayoutGrid>#head>#home>a,
+div#mainLayoutGrid>#head>#week>a,
+div#mainLayoutGrid>#head>#maand>a,
+div#mainLayoutGrid>#head>#signOut>a{
+
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+div#mainLayoutGrid>#head>#home:hover,
+div#mainLayoutGrid>#head>#week:hover,
+div#mainLayoutGrid>#head>#maand:hover,
+div#mainLayoutGrid>#head>#signOut:hover{
+  background-color: #D3D3D3;
 }
 div#mainLayoutGrid>#head>#week{
   grid-area: week;
+
 }
 div#mainLayoutGrid>#head>#maand{
   grid-area: maand;
@@ -49,10 +83,16 @@ div#mainLayoutGrid>#head>#signOut{
 
 div#mainLayoutGrid>#year20{
   grid-area: year20;
-  text-align: center;
-  font-size: 24px;
- 
   
+  padding-top: 64px;
+  padding-bottom: 64px;
+  text-align: center;
+  box-sizing: inherit;
+  display: block;
+  
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
 }
 div#mainLayoutGrid>#maanden20{
   grid-area: maanden20;
@@ -69,8 +109,6 @@ div#mainLayoutGrid>#maanden20{
 }
 div#mainLayoutGrid>#year21{
   grid-area: year21;
-  text-align: center;
-  font-size: 24px;
   
 }
 div#mainLayoutGrid>#maanden21{
