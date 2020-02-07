@@ -1,14 +1,129 @@
+*{
+  font-family: "Lato", sans-serif;
+}
+div#mainLayoutGrid {
+  display: grid;
+
+  grid-template-columns: auto;
+  grid-template-rows: 30px auto auto auto auto 50px;
+
+  grid-template-areas:  "head"
+                        "titel"
+                        "email"
+                        "wachtwoord"
+                        "login"
+                        "signup";
+
+}
+
+
 div#mainLayoutGrid>#head{
   grid-area: head;
   
-  display: grid;
-  grid-template-columns: 1p;
-  grid-template-rows: auto;
-
-  grid-template-areas: "home";
-  grid-gap: 20px;
-  border-color: 1px solid black;
+  font-weight: 400;
+  margin: 10px 0;
+  font-size: 20px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  box-sizing: inherit;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: #f1f1f1;
+  color: #000;
+  font-size: 18px;
+  padding-left: 200px;
 }
-div#mainLayoutGrid>#head>#home{
-  grid-area: home;
+
+div#mainLayoutGrid>#titel{
+  grid-area: titel;
+  
+  padding-top: 100px;
+  text-align: center;
+  box-sizing: inherit;
+  display: block;
+}
+
+div#mainLayoutGrid>#titel>p{
+  font-size: 24px;
+  text-decoration: underline solid #808080	;
+}
+
+div#mainLayoutGrid>#email{
+  grid-area: email;
+  
+  padding-left: 200px;
+}
+
+div#mainLayoutGrid>#email>p{
+    font-size: 20px;
+}
+div#mainLayoutGrid>#email>#inputEmail>input,
+div#mainLayoutGrid>#wachtwoord>#inputWachtwoord>input{
+  width: 80%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  display: block;
+  overflow: visible;
+}
+div#mainLayoutGrid>#wachtwoord{
+  grid-area: wachtwoord;
+  padding-left: 200px;
+}
+div#mainLayoutGrid>#wachtwoord>p{
+  font-size: 20px;
+}
+div#mainLayoutGrid>#login{
+  grid-area: login;
+  padding-left: 200px;
+  margin-top: 50px;
+  text-align: center;
+}
+div#mainLayoutGrid>#login>a{
+  font-size: 20px;
+  color: #FFF;
+  width: 80%;
+  padding: 8px;
+  display: block;
+  background-color: #000;
+  text-decoration: none;
+}
+div#mainLayoutGrid>#signup{
+  grid-area: signup;
+  
+  font-weight: 400;
+  margin: 10px 0;
+  font-size: 20px;
+  width: 100%;
+  z-index: 1;
+  box-sizing: inherit;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: #f1f1f1;
+  color: #000;
+  font-size: 18px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 200px;
+  text-align: center;
+}
+
+div#mainLayoutGrid>#signup>a{
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
 }
