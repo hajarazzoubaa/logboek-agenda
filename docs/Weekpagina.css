@@ -1,6 +1,18 @@
 *{
   font-family: "Lato", sans-serif;
  }
+div#mainLayoutGrid {
+  display: grid;
+
+  grid-template-columns: auto;
+  grid-template-rows: 30px auto auto auto;
+
+  grid-template-areas:  "head"
+                        "titel"
+                        "kalender"
+                        "volgende";
+
+}
 div#mainLayoutGrid>#head{
   grid-area: head;
   
@@ -9,27 +21,193 @@ div#mainLayoutGrid>#head{
   grid-template-rows: auto;
 
   grid-template-areas: "home week maand signOut";
-  grid-gap: 0px;
-  border-color: 1px solid black;
-  background-color: #f1f1f1;
-  font-size: 18px;
-  line-height: 1.5;
-  text-align: center;
+  
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
+  font-size: 20px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  box-sizing: inherit;
 }
+
 div#mainLayoutGrid>#head>#home{
   grid-area: home;
+
 }
-div#mainLayoutGrid>#head>#week{
-  grid-area: week;
-}
-div#mainLayoutGrid>#head>#maand{
-  grid-area: maand;
-}
+
+div#mainLayoutGrid>#head>#home,
+div#mainLayoutGrid>#head>#week,
+div#mainLayoutGrid>#head>#maand,
 div#mainLayoutGrid>#head>#signOut{
-  grid-area: signOut;
-}
-div#mainLayoutGrid>#titel{
+    
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
   text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: #f1f1f1;
+}
+div#mainLayoutGrid>#head>#home>a,
+div#mainLayoutGrid>#head>#week>a,
+div#mainLayoutGrid>#head>#maand>a,
+div#mainLayoutGrid>#head>#signOut>a{
+
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+div#mainLayoutGrid>#head>#home:hover,
+div#mainLayoutGrid>#head>#week:hover,
+div#mainLayoutGrid>#head>#maand:hover,
+div#mainLayoutGrid>#head>#signOut:hover{
+  background-color: #D3D3D3;
+}
+
+div#mainLayoutGrid>#titel{
+  grid-area: titel;
+  padding-top: 16px;
+  text-align: center;
+  box-sizing: inherit;
+  display: block;
+}
+
+div#mainLayoutGrid>#titel>p{
+  font-family: "Lato", sans-serif;
   font-size: 24px;
 }
 
+div#mainLayoutGrid>#kalender{
+  grid-area: kalender;
+  
+  display: grid;
+  grid-template-columns: 1p 1p 1p 1p 1p;
+  grid-template-rows: auto auto auto;
+
+  grid-template-areas: ". maandag dinsdag woensdag ."
+                       ". donderdag vrijdag zaterdag ."
+                       ". zondag . . .";
+}
+
+div#mainLayoutGrid>#kalender>#maandag{
+  grid-area: maandag;
+
+
+}
+div#mainLayoutGrid>#kalender>#maandag>ul>li>h1,
+div#mainLayoutGrid>#kalender>#woensdag>ul>li>h1,
+div#mainLayoutGrid>#kalender>#vrijdag>ul>li>h1,
+div#mainLayoutGrid>#kalender>#zondag>ul>li>h1{
+  background-color: #000;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  text-decoration: underline solid #808080	;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-size: 24px;
+  text-align: center;
+  list-style-type: none;
+  text-decoration: none;
+
+}
+
+div#mainLayoutGrid>#kalender>#dinsdag>ul>li>h1,
+div#mainLayoutGrid>#kalender>#donderdag>ul>li>h1,
+div#mainLayoutGrid>#kalender>#zaterdag>ul>li>h1{
+  background-color: #616161;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  text-decoration: underline solid #808080	;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-size: 24px;
+  text-align: center;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+div#mainLayoutGrid>#kalender>#maandag>ul,
+div#mainLayoutGrid>#kalender>#dinsdag>ul,
+div#mainLayoutGrid>#kalender>#woensdag>ul,
+div#mainLayoutGrid>#kalender>#donderdag>ul,
+div#mainLayoutGrid>#kalender>#vrijdag>ul,
+div#mainLayoutGrid>#kalender>#zaterdag>ul,
+div#mainLayoutGrid>#kalender>#zondag>ul
+{
+  list-style-type: none;
+  padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+div#mainLayoutGrid>#kalender>#maandag>ul>li,
+div#mainLayoutGrid>#kalender>#dinsdag>ul>li,
+div#mainLayoutGrid>#kalender>#woensdag>ul>li,
+div#mainLayoutGrid>#kalender>#donderdag>ul>li,
+div#mainLayoutGrid>#kalender>#vrijdag>ul>li,
+div#mainLayoutGrid>#kalender>#zaterdag>ul>li,
+div#mainLayoutGrid>#kalender>#zondag>ul>li
+{
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+div#mainLayoutGrid>#kalender>#maandag>ul>li>a,
+div#mainLayoutGrid>#kalender>#dinsdag>ul>li>a,
+div#mainLayoutGrid>#kalender>#woensdag>ul>li>a,
+div#mainLayoutGrid>#kalender>#donderdag>ul>li>a,
+div#mainLayoutGrid>#kalender>#vrijdag>ul>li>a,
+div#mainLayoutGrid>#kalender>#zaterdag>ul>li>a,
+div#mainLayoutGrid>#kalender>#zondag>ul>li>a
+{
+  background-color: #4CAF50;
+  padding: 15px;
+  text-decoration: none;
+  color: #FFF;
+}
+
+div#mainLayoutGrid>#kalender>#dinsdag{
+  grid-area: dinsdag;
+
+}
+div#mainLayoutGrid>#kalender>#woensdag{
+  grid-area: woensdag;
+
+}
+div#mainLayoutGrid>#kalender>#donderdag{
+  grid-area: donderdag;
+
+}
+div#mainLayoutGrid>#kalender>#vrijdag{
+  grid-area: vrijdag;
+
+}
+div#mainLayoutGrid>#kalender>#zaterdag{
+  grid-area: zaterdag;
+
+}
+div#mainLayoutGrid>#kalender>#zondag{
+  grid-area: zondag;
+
+}
+
+div#mainLayoutGrid>#volgende{
+  grid-area: volgende;
+  text-align: right;
+    margin-bottom: 50px;
+
+}
+
+div#mainLayoutGrid>#volgende>a{
+  background-color: #f1f1f1;
+  padding: 15px;
+}
