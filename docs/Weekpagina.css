@@ -1,6 +1,5 @@
 *{
   font-family: "Lato", sans-serif;
-  list-style-type: none;
  }
 div#mainLayoutGrid {
   display: grid;
@@ -23,7 +22,6 @@ div#mainLayoutGrid>#head{
 
   grid-template-areas: "home week maand signOut";
   
-  font-family: "Lato", sans-serif;
   font-weight: 400;
   margin: 10px 0;
   font-size: 20px;
@@ -78,11 +76,8 @@ div#mainLayoutGrid>#titel{
   text-align: center;
   box-sizing: inherit;
   display: block;
-}
+    font-size: 24px;
 
-div#mainLayoutGrid>#titel>p{
-  font-family: "Lato", sans-serif;
-  font-size: 24px;
 }
 
 div#mainLayoutGrid>#kalender{
@@ -97,18 +92,13 @@ div#mainLayoutGrid>#kalender{
                        ". zondag . . .";
 }
 
-div#mainLayoutGrid>#kalender>#maandag{
-  grid-area: maandag;
 
-
-}
 div#mainLayoutGrid>#kalender>#maandag>ul>li>h1,
 div#mainLayoutGrid>#kalender>#woensdag>ul>li>h1,
 div#mainLayoutGrid>#kalender>#vrijdag>ul>li>h1,
 div#mainLayoutGrid>#kalender>#zondag>ul>li>h1{
   background-color: #000;
   color: #fff;
-  font-family: "Lato", sans-serif;
   font-size: 24px;
   text-decoration: underline solid #808080	;
   padding-top: 32px;
@@ -117,6 +107,7 @@ div#mainLayoutGrid>#kalender>#zondag>ul>li>h1{
   text-align: center;
   list-style-type: none;
   text-decoration: none;
+  
 
 }
 
@@ -125,7 +116,6 @@ div#mainLayoutGrid>#kalender>#donderdag>ul>li>h1,
 div#mainLayoutGrid>#kalender>#zaterdag>ul>li>h1{
   background-color: #616161;
   color: #fff;
-  font-family: "Lato", sans-serif;
   font-size: 24px;
   text-decoration: underline solid #808080	;
   padding-top: 32px;
@@ -146,7 +136,7 @@ div#mainLayoutGrid>#kalender>#zondag>ul
 {
   list-style-type: none;
   padding: 8px 16px;
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 div#mainLayoutGrid>#kalender>#maandag>ul>li,
@@ -161,6 +151,7 @@ div#mainLayoutGrid>#kalender>#zondag>ul>li
   padding-bottom: 16px;
   text-align: center;
   border: 1px solid #ddd;
+  border-top: none;
 }
 div#mainLayoutGrid>#kalender>#maandag>ul>li>a,
 div#mainLayoutGrid>#kalender>#dinsdag>ul>li>a,
@@ -174,6 +165,10 @@ div#mainLayoutGrid>#kalender>#zondag>ul>li>a
   padding: 15px;
   text-decoration: none;
   color: #FFF;
+}
+
+div#mainLayoutGrid>#kalender>#maandag{
+  grid-area: maandag;
 }
 
 div#mainLayoutGrid>#kalender>#dinsdag{
@@ -204,8 +199,7 @@ div#mainLayoutGrid>#kalender>#zondag{
 div#mainLayoutGrid>#volgende{
   grid-area: volgende;
   text-align: right;
-    margin-bottom: 50px;
-
+  margin-bottom: 50px;
 }
 
 div#mainLayoutGrid>#volgende>a{
