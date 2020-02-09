@@ -13,33 +13,30 @@ div#mainLayoutGrid {
                         "wachtwoord"
                         "login"
                         "signup";
-
 }
-
 
 div#mainLayoutGrid>#head{
   grid-area: head;
   
   font-weight: 400;
-  margin: 10px 0;
   font-size: 20px;
-  top: 0;
-  position: fixed;
-  width: 100%;
+  text-decoration: none;
+
   z-index: 1;
   box-sizing: inherit;
-  border: none;
   display: inline-block;
-  vertical-align: middle;
   overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  white-space: nowrap;
+  
   background-color: #f1f1f1;
   color: #000;
-  font-size: 18px;
+  
   padding-left: 200px;
+  margin: 10px 0;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  vertical-align: middle;
+  border: none;
 }
 
 div#mainLayoutGrid>#titel{
@@ -53,18 +50,19 @@ div#mainLayoutGrid>#titel{
 
 div#mainLayoutGrid>#titel>p{
   font-size: 24px;
-  text-decoration: underline solid #808080	;
+  text-decoration: underline solid #808080;
 }
 
 div#mainLayoutGrid>#email{
   grid-area: email;
-  
   padding-left: 200px;
 }
 
-div#mainLayoutGrid>#email>p{
-    font-size: 20px;
+div#mainLayoutGrid>#email>p,
+div#mainLayoutGrid>#wachtwoord>p{
+  font-size: 20px;
 }
+
 div#mainLayoutGrid>#email>#inputEmail>input,
 div#mainLayoutGrid>#wachtwoord>#inputWachtwoord>input{
   width: 80%;
@@ -73,19 +71,19 @@ div#mainLayoutGrid>#wachtwoord>#inputWachtwoord>input{
   display: block;
   overflow: visible;
 }
+
 div#mainLayoutGrid>#wachtwoord{
   grid-area: wachtwoord;
   padding-left: 200px;
 }
-div#mainLayoutGrid>#wachtwoord>p{
-  font-size: 20px;
-}
+
 div#mainLayoutGrid>#login{
   grid-area: login;
   padding-left: 200px;
   margin-top: 50px;
   text-align: center;
 }
+
 div#mainLayoutGrid>#login>a{
   font-size: 20px;
   color: #FFF;
@@ -95,30 +93,30 @@ div#mainLayoutGrid>#login>a{
   background-color: #000;
   text-decoration: none;
 }
+
 div#mainLayoutGrid>#signup{
   grid-area: signup;
   
   font-weight: 400;
-  margin: 10px 0;
   font-size: 20px;
-  width: 100%;
+  
   z-index: 1;
   box-sizing: inherit;
-  border: none;
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
+  
   text-decoration: none;
-  color: inherit;
-  cursor: pointer;
+  text-align: center;
+
   white-space: nowrap;
   background-color: #f1f1f1;
   color: #000;
-  font-size: 18px;
-  padding-top: 100px;
+  
+  padding-top: 50px;
   padding-bottom: 100px;
-  margin-top: 200px;
-  text-align: center;
+  margin-top: 100px;
+  width: 100%;
 }
 
 div#mainLayoutGrid>#signup>a{
