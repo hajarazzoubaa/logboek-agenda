@@ -55,7 +55,7 @@ div#mainLayoutGrid>#titel>p{
 
 div#mainLayoutGrid>#email{
   grid-area: email;
-  padding-left: 200px;
+  padding-left: 20%;
 }
 
 div#mainLayoutGrid>#email>p,
@@ -74,12 +74,12 @@ div#mainLayoutGrid>#wachtwoord>#inputWachtwoord>input{
 
 div#mainLayoutGrid>#wachtwoord{
   grid-area: wachtwoord;
-  padding-left: 200px;
+  padding-left: 20%;
 }
 
 div#mainLayoutGrid>#login{
   grid-area: login;
-  padding-left: 200px;
+  padding-left: 20%;
   margin-top: 50px;
   text-align: center;
 }
@@ -125,3 +125,4 @@ div#mainLayoutGrid>#signup>a{
   color: #fff;
   padding: 20px;
 }
+
