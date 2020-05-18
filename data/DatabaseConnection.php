@@ -9,9 +9,9 @@ class DatabaseConnection {
   
   function __construct(){
     $this->_host = "www.piustien.net";
-    $this-> _username= "";
-    $this-> _password = "";
-    $this-> _database = "";
+    $this-> _username= "bin10";
+    $this-> _password = "JnZp338x3mTKmwc";
+    $this-> _database = "bin10";
     
     $this ->_connection = new mysqli($this->_host, $this-> _username, $this-> _password, $this-> _databse);
     
