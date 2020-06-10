@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: www.piustien.net
--- Gegenereerd op: 22 mrt 2020 om 17:46
+-- Gegenereerd op: 10 jun 2020 om 13:25
 -- Serverversie: 5.5.62-0+deb8u1
--- PHP-versie: 7.2.19
+-- PHP-versie: 7.2.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,92 +25,47 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Tabelstructuur voor tabel `Activiteit`
+--
+
+CREATE TABLE `Activiteit` (
+  `ID` int(11) NOT NULL,
+  `Start` datetime NOT NULL,
+  `Einde` datetime NOT NULL,
+  `Notitie` text NOT NULL,
+  `Onderwerp` text NOT NULL,
+  `Soort` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `Activiteit`
+--
+
+INSERT INTO `Activiteit` (`ID`, `Start`, `Einde`, `Notitie`, `Onderwerp`, `Soort`) VALUES
+(1, '2020-01-20 13:30:00', '2020-01-20 14:30:00', 'Taak1: sollicitatiebrief en sollicitatiegesprek', 'Engels', 'Taak'),
+(2, '2020-01-21 14:00:00', '2020-01-21 14:30:00', 'Tram 10', 'Tandarts', 'Afspraak'),
+(3, '2020-07-18 00:00:00', '2020-07-19 00:00:00', '', 'Afspraak kapper', 'Afspraak');
+
+-- --------------------------------------------------------
+
+--
 -- Tabelstructuur voor tabel `Administrator`
 --
 
 CREATE TABLE `Administrator` (
-  `email` varchar(30) NOT NULL,
-  `wachtwoord` varchar(30) NOT NULL
+  `ID` int(11) NOT NULL,
+  `Herinnering` text NOT NULL,
+  `DateTime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `Administrator`
 --
 
-INSERT INTO `Administrator` (`email`, `wachtwoord`) VALUES
-('hajar.azzoubaa@leerling.piusti', 'leerling01'),
-('loulou-11@gmail.com', 'loulou123');
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `Afspraak`
---
-
-CREATE TABLE `Afspraak` (
-  `naam` varchar(30) NOT NULL,
-  `locatie` varchar(30) NOT NULL,
-  `tijdstip` time NOT NULL,
-  `persoon` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Gegevens worden geëxporteerd voor tabel `Afspraak`
---
-
-INSERT INTO `Afspraak` (`naam`, `locatie`, `tijdstip`, `persoon`) VALUES
-('Brunch', 'Kielpark', '12:12:00', 'Lofifi'),
-('tandarts', 'Abdijstraat 15', '18:12:12', 'Dr Simons');
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `Categorie`
---
-
-CREATE TABLE `Categorie` (
-  `naam` varchar(30) NOT NULL,
-  `datum` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `Evenement`
---
-
-CREATE TABLE `Evenement` (
-  `naam` varchar(30) NOT NULL,
-  `locatie` varchar(30) NOT NULL,
-  `tijd` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Gegevens worden geëxporteerd voor tabel `Evenement`
---
-
-INSERT INTO `Evenement` (`naam`, `locatie`, `tijd`) VALUES
-('Musical Justin Bieber', 'stadsschouwburg', '20:10:00'),
-('Verjaardagsfeest', 'Abdijstraat 15', '18:10:00');
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `Feestdag`
---
-
-CREATE TABLE `Feestdag` (
-  `naam` varchar(30) NOT NULL,
-  `datum` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Gegevens worden geëxporteerd voor tabel `Feestdag`
---
-
-INSERT INTO `Feestdag` (`naam`, `datum`) VALUES
-('Verjaardag Hajar', '2020-04-24'),
-('Verjaardag Lisse', '2020-07-18');
+INSERT INTO `Administrator` (`ID`, `Herinnering`, `DateTime`) VALUES
+(1, 'Verjaardag Lisse', '2020-07-18 00:00:00'),
+(2, 'Concert Justin Bieber', '2020-08-17 19:00:00'),
+(3, 'Docters afspraak', '2020-06-12 10:45:00');
 
 -- --------------------------------------------------------
 
@@ -119,133 +74,63 @@ INSERT INTO `Feestdag` (`naam`, `datum`) VALUES
 --
 
 CREATE TABLE `Gebruiker` (
-  `email` varchar(30) NOT NULL,
-  `naam` varchar(30) NOT NULL,
-  `wachtwoord` tinytext NOT NULL
+  `ID` int(11) NOT NULL,
+  `email` text NOT NULL,
+  `wachtwoord` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `Gebruiker`
 --
 
-INSERT INTO `Gebruiker` (`email`, `naam`, `wachtwoord`) VALUES
-('gebruiker01@gmail.com', 'gebruiker01', 'gebruiker01'),
-('gebruiker02@gmail.com', 'gebruiker02', 'gebruiker02');
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `Herinnering`
---
-
-CREATE TABLE `Herinnering` (
-  `naam` varchar(30) NOT NULL,
-  `tijd` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Gegevens worden geëxporteerd voor tabel `Herinnering`
---
-
-INSERT INTO `Herinnering` (`naam`, `tijd`) VALUES
-('Bloemen kopen voor Valentijn', '15:00:00'),
-('Kinderen ophalen', '14:20:00');
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `Persoon`
---
-
-CREATE TABLE `Persoon` (
-  `email` varchar(30) NOT NULL,
-  `naam` tinytext NOT NULL,
-  `wachtwoord` tinytext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Gegevens worden geëxporteerd voor tabel `Persoon`
---
-
-INSERT INTO `Persoon` (`email`, `naam`, `wachtwoord`) VALUES
-('gebruiker01@gmail.com', 'Gebruiker01', 'gebruiker01'),
-('gebruiker02@gmail.com', 'gebruiker02', 'gebruiker02');
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `Taak`
---
-
-CREATE TABLE `Taak` (
-  `naam` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Gegevens worden geëxporteerd voor tabel `Taak`
---
-
-INSERT INTO `Taak` (`naam`) VALUES
-('Taak Frans'),
-('Taak wiskunde');
+INSERT INTO `Gebruiker` (`ID`, `email`, `wachtwoord`) VALUES
+(1, 'hajar@gmail.com', 'hajar'),
+(2, 'lisse@gmail.com', 'lisse'),
+(3, 'tim@gmail.com', 'tim');
 
 --
 -- Indexen voor geëxporteerde tabellen
 --
 
 --
+-- Indexen voor tabel `Activiteit`
+--
+ALTER TABLE `Activiteit`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexen voor tabel `Administrator`
 --
 ALTER TABLE `Administrator`
-  ADD PRIMARY KEY (`email`,`wachtwoord`);
-
---
--- Indexen voor tabel `Afspraak`
---
-ALTER TABLE `Afspraak`
-  ADD PRIMARY KEY (`naam`);
-
---
--- Indexen voor tabel `Categorie`
---
-ALTER TABLE `Categorie`
-  ADD PRIMARY KEY (`naam`);
-
---
--- Indexen voor tabel `Evenement`
---
-ALTER TABLE `Evenement`
-  ADD PRIMARY KEY (`naam`);
-
---
--- Indexen voor tabel `Feestdag`
---
-ALTER TABLE `Feestdag`
-  ADD PRIMARY KEY (`naam`);
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexen voor tabel `Gebruiker`
 --
 ALTER TABLE `Gebruiker`
-  ADD PRIMARY KEY (`email`,`naam`);
+  ADD PRIMARY KEY (`ID`);
 
 --
--- Indexen voor tabel `Herinnering`
+-- AUTO_INCREMENT voor geëxporteerde tabellen
 --
-ALTER TABLE `Herinnering`
-  ADD PRIMARY KEY (`naam`);
 
 --
--- Indexen voor tabel `Persoon`
+-- AUTO_INCREMENT voor een tabel `Activiteit`
 --
-ALTER TABLE `Persoon`
-  ADD PRIMARY KEY (`email`);
+ALTER TABLE `Activiteit`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- Indexen voor tabel `Taak`
+-- AUTO_INCREMENT voor een tabel `Administrator`
 --
-ALTER TABLE `Taak`
-  ADD PRIMARY KEY (`naam`);
+ALTER TABLE `Administrator`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT voor een tabel `Gebruiker`
+--
+ALTER TABLE `Gebruiker`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
